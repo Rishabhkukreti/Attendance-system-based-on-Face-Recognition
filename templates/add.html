@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin-Register Student</title> 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../static/css/add.css">
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+</head>
+
+<body> 
+  <a href="{{ url_for('home') }}"><button type="button" class="m-3 btn btn-outline-dark" title="Home"><i class="bi bi-house-door-fill"></i></button></a>
+  <div class="container my-3 p-0 shadow rounded">
+    <form  action="/add" method="post" enctype="multipart/form-data">
+      <div class="text-center mx-0 mb-4 row text-bg-secondary rounded-top">
+        <h4>Register Student</h4>
+      </div>
+      <h4 class="mx-2">Personal Info.</h4>
+      <div class="row m-0 my-2">
+        <div class="col-6">
+          <label for="inputName">Name</label><br>
+          <input class="form-control" type="text" name="Name" id="inputName" placeholder="Name" maxlength="30" required>
+        </div>
+        <div class="col-2">
+          <label for="inputDOB">D.O.B</label><br>
+          <input class="form-control" type="date" name="DOB" id="inputDOB" placeholder="Date of Birth" required>
+        </div>
+        <div class="col-4">
+          <label for="inputGen">Gender</label><br>
+          <div class="row">
+            <div class="col-4">
+              <input class="mx-2" type="radio" name="Gender" id="male" value="M">Male
+            </div>
+            <div class="col-4">
+              <input class="mx-2" type="radio" name="Gender" id="female" value="F">Female
+            </div>
+            <div class="col-4">
+              <input class="mx-2" type="radio" name="Gender" id="other" value="O">Other
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row m-0 my-2">
+        <div class="col-6">
+          <label for="inputEmail">Email</label><br>
+          <input class="form-control" type="email" name="Email" id="inputEmail"
+          placeholder="abc@xyz.com" maxlength="30" required>
+        </div>
+        <div class="col-6">
+          <label for="inputAddress">Address</label><br>
+          <input class="form-control" type="text" name="Address" id="inputAddress" placeholder="1234 Main St" maxlength="40" required>
+        </div>
+      </div>
+      <div class="row m-0 my-2">
+        <div class="col-6">
+          <label for="inputGuardian">Father's Name</label><br>
+          <input class="form-control" type="text" name="Guardian" id="inputGuardian" placeholder="Guardian Name" maxlength="30" required>
+        </div>
+        <div class="col-6">
+          <label for="inputContact">Contact Number</label><br>
+          <input class="form-control" type="number" name="Contact" id="inputContact" placeholder="Mobile No" max="9999999999" required>
+        </div>
+      </div>
+      <div class="row m-0 my-2">
+        <div class="col-6">
+          <label for="inputCity">City</label><br>
+          <input class="form-control" type="text" name="City" id="inputCity" maxlength="20" required>
+        </div>
+        <div class="col-4">
+          <label for="inputState">State</label><br>
+          <input class="form-control" type="text" name="State" id="inputState" maxlength="20" required>
+        </div>
+        <div class="col-2">
+          <label for="inputZip">Zip</label><br>
+          <input class="form-control" type="number" name="Zip" id="inputZip" max="999999" required>
+        </div>
+      </div>
+      <div class="row m-0 my-3">
+        <div class="col-12">
+          <label for="inputPic">Student Picture</label>
+          <input type="file" name="StudentPic" accept=".jpeg" id="inputpic" required><span>*Please Choose a picture of the student only with face clearly visible*</span>
+        </div>  
+      </div>
+
+      <h4 class="mx-2">University Info</h4>
+      
+        <div class="row m-0 my-2">
+          <div class="col-6">
+            <label for="inputRoll">University ID</label><br>
+            <input class="form-control" type="number" name="UniversityId" id="inputRoll" max="99999999999" required>
+          </div>
+          <div class="col-6">
+            <label for="inputUniversity">University</label><br>
+            <input class="form-control" type="text" name="University" id="inputUniversity" maxlength="30" required>
+          </div>
+        </div>
+        <div class="row m-0 my-2">
+          <div class="col-6">
+            <label for="inputSection">Section</label><br>
+            <input class="form-control" type="text" name="Section" id="inputSection" maxlength="2" required>
+          </div>
+          <div class="col-6">
+            <label for="inputCroll">Class Roll No.</label><br>
+            <input class="form-control" type="number" name="ClassRno" id="inputCroll" max="99999" required>
+          </div>
+        </div>
+        <div class="row m-0 my-2">
+          <div class="col-6">
+            <label for="inputCourse">Course</label><br>
+            <input class="form-control" type="text" name="Course" id="inputCourse" maxlength="10" required>
+          </div>
+          <div class="col-6">
+            <label for="inputSem">Year/Sem</label><br>
+            <input class="form-control" type="number" name="Semester" id="inputSem" maxlength="99" required>
+          </div>
+        </div>
+      <div>
+        <div class="text-center">
+          <button type="submit" class="text-center btn btn-primary my-2">ADD Student</button>
+        </div>
+      </div>
+    </form>
+    {% if status_add %}
+    <div>
+      <h6 class="text-center" style="color:green;">*Student Added Succesfully*</h6>
+    </div>
+    {% endif %}
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

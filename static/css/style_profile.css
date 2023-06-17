@@ -1,0 +1,40 @@
+body{
+    /* background-color: #c0c0c0; */
+    background-image: url('../images/indeximages/bg_global.jpg');
+}
+
+.container{
+    width: 70vw; 
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto;
+    background-color: rgba(255, 255, 255,0.6);
+}
+
+
+input[type='text'], input[type='number'], input[type='email'], input[type='date']{
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+}
+
+.student-img{
+    width: 250px;
+    height: 300px;
+    object-fit: fill;
+}
+
+#attendance-success{
+    color: green;
+}
+
+#attendance-error{
+    color: red;
+}
+

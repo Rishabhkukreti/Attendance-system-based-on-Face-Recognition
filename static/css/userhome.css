@@ -1,0 +1,39 @@
+body{
+    /* background-color: #c0c0c0; */
+    background-image: url('../images/indeximages/bg_admin.jpg');
+    background-size: cover;
+}
+.main_content{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top:10%;
+    left:10%;
+    width:80%;
+    box-shadow: 5px 5px 10px grey;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.userimage{
+    border: 2px solid rgb(213, 213, 213);
+    background-size: cover;
+    width:150px;
+    height:150px;
+    margin:auto;
+    border-radius: 100px;
+}
+.card-img-top{
+    height: 200px;
+}
+.tagline{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+.service_gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}

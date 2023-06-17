@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecognizeIt</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/index.css">
+    <!-- Voice Recognition JS -->
+    <script src="../static/javascript/voice_recognition.js" defer></script>
+</head>
+<body>
+    <!---Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">RecognizeIt</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('face_detect') }}">Student</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('login') }}">Admin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact us</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="/" method="post" id="search-form">
+              <input class="form-control mr-sm-2" name="query" type="text" placeholder="Search Google..." autocomplete="off" autofocus>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--navbar finish-->
+
+
+      <!-- crousel open -->
+
+      <div id="carouselExampleControls" class="carousel slide my-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../static/images/indeximages/image4.jpg" class="d-block h-90 w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../static/images/indeximages/image1.jpeg" class="d-block h-90 w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../static/images/indeximages/image5.jpg" class="d-block h-90 w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- crousel close -->
+
+
+      <!-- GRID -->
+      <div class="container my-5">
+          <div class="row">
+              <h1>Our Services</h1>
+          </div>
+          <div class="row">
+              <div class="col-5">
+              <img src="../static/images/indeximages/student.jpg" width="100%" height="95%">
+              </div>
+              <div class="col-7 flex">
+                <h2>For Students</h2>
+                <h5>This system allows student to mark their Attendance securely</h5>
+                <h5>Key Features:</h5>
+                  <ul>
+                    <li>Accurate Face Detection</li>
+                    <li>Easy and less time consuming</li>
+                    <li>Accessibility to attendance status</li>
+                  </ul>
+                <a href="{{ url_for('face_detect') }}"><button class="btn btn-outline-dark">Mark Your Today's Attendance</button></a>
+              </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-7 flex">
+              <h2>For Adminstators</h2>
+              <h5>This system allows admins to manage students details with a simple user interface</h5>
+              <h5>Key Features:</h5>
+              <ul>
+                <li>Login using face recognition</li>
+                <li>Add new student in Database</li>
+                <li>Update Student Details</li>
+                <li>Delete student record</li>
+              </ul>
+              <a href="{{ url_for('login') }}"><button class="btn btn-outline-dark">Login</button></a>
+            </div>
+            <div class="col-5">
+            <img src="../static/images/indeximages/admin.jpg" width="100%" height="95%">
+            </div>
+          </div>
+          
+          
+          
+      </div>
+      <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+  
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-github"></i
+        ></a>
+      </section>
+      <section class="">
+        <form action="/contact">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p>
+                <strong>For any query : </strong>
+              </p>
+            </div>
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <a href="{{url_for('contact')}}">
+                <button class="btn btn-outline-light btn-sm mb-2">
+                Contact Us
+              </button>
+              </a>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white" href="/">RecognizeIt</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
